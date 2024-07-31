@@ -1,0 +1,23 @@
+/* Hero.css */
+.relative::before,
+.relative::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 0;
+}
+
+.relative::before {
+    left: 0;
+    background-color: #22c55e;
+    /* Tailwind's green-500 color */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+}
+
+.relative::after {
+    right: 0;
+    background-color: white;
+    clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 100%);
+}
